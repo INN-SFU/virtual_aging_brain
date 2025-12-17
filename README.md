@@ -1,6 +1,6 @@
 # The virtual aging brain
 
-This repository contains the code to perform and implement the Virtual Aging Brain (VAB) as described in [1].
+This repository is a fork of the [The Virtual Aging Brain](https://github.com/ins-amu/virtual_aging_brain), adapted for the TVB Node at CNS 2026. It contains the code to perform and implement the Virtual Aging Brain (VAB) as described in [1].
 
 ## Git-repo
 
@@ -9,7 +9,7 @@ This repository contains the code to perform and implement the Virtual Aging Bra
    1. Open the terminal and run the command
    
    2. ```
-      git clone https://github.com/ins-amu/virtual_aging_brain.git
+      git clone https://github.com/INN-SFU/virtual_aging_brain.git
       ```
 
 2. You can always download this folder from the website
