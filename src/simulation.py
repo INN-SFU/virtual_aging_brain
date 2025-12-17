@@ -630,7 +630,7 @@ class BalloonModel(HasTraits):
         extend_size = self.result_size(input_shape)  # Currently no derived attributes.
         return extend_size
 
-def tavg_to_bold(tavg_t, tavg_d, sim=None, tavg_period=None, connectivity=None, svar=0, decimate=2000):
+def tavg_to_bold(tavg_t, tavg_d, sim=None, tavg_period=None, connectivity=None, svar=0, decimate=2000, TE=0.028):
     if sim is not None:
         assert len(sim.monitors) == 1
         tavg_period = sim.monitors[0].period
@@ -646,7 +646,7 @@ def tavg_to_bold(tavg_t, tavg_d, sim=None, tavg_period=None, connectivity=None, 
     )
     tsr.configure()
 
-    bold_model = BalloonModel(time_series = tsr, dt=tavg_period/1000)
+    bold_model = BalloonModel(time_series = tsr, dt=tavg_period/1000, TE=TE)
     bold_data_analyzer  = bold_model.evaluate()
 
     bold_t = bold_data_analyzer.time[::decimate] * 1000 # to ms
